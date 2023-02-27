@@ -11496,6 +11496,8 @@ self: super: with self; {
   tidylib = callPackage ../development/python-modules/pytidylib { };
 
   tifffile = callPackage ../development/python-modules/tifffile { };
+  
+  tiktoken = callPackage ../development/python-modules/tiktoken { };
 
   tika = callPackage ../development/python-modules/tika { };
 

@@ -228,6 +228,7 @@ in {
   fluentd = handleTest ./fluentd.nix {};
   fluidd = handleTest ./fluidd.nix {};
   fontconfig-default-fonts = handleTest ./fontconfig-default-fonts.nix {};
+  forgejo = handleTest ./gitea.nix { giteaPackage = pkgs.forgejo; };
   freenet = handleTest ./freenet.nix {};
   freeswitch = handleTest ./freeswitch.nix {};
   freshrss-sqlite = handleTest ./freshrss-sqlite.nix {};
@@ -241,7 +242,7 @@ in {
   geth = handleTest ./geth.nix {};
   ghostunnel = handleTest ./ghostunnel.nix {};
   gitdaemon = handleTest ./gitdaemon.nix {};
-  gitea = handleTest ./gitea.nix {};
+  gitea = handleTest ./gitea.nix { giteaPackage = pkgs.gitea; };
   gitlab = handleTest ./gitlab.nix {};
   gitolite = handleTest ./gitolite.nix {};
   gitolite-fcgiwrap = handleTest ./gitolite-fcgiwrap.nix {};
@@ -432,10 +433,8 @@ in {
   nagios = handleTest ./nagios.nix {};
   nar-serve = handleTest ./nar-serve.nix {};
   nat.firewall = handleTest ./nat.nix { withFirewall = true; };
-  nat.firewall-conntrack = handleTest ./nat.nix { withFirewall = true; withConntrackHelpers = true; };
   nat.standalone = handleTest ./nat.nix { withFirewall = false; };
   nat.nftables.firewall = handleTest ./nat.nix { withFirewall = true; nftables = true; };
-  nat.nftables.firewall-conntrack = handleTest ./nat.nix { withFirewall = true; withConntrackHelpers = true; nftables = true; };
   nat.nftables.standalone = handleTest ./nat.nix { withFirewall = false; nftables = true; };
   nats = handleTest ./nats.nix {};
   navidrome = handleTest ./navidrome.nix {};
